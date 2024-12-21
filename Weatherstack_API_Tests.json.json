@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "90896c77-8524-45ad-819b-5cf77bdea88d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40251349"
+	},
+	"item": [
+		{
+			"name": "API_01",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "{{baseURL}}?access_key={{API_KEY}}&query=Paris",
+					"host": [
+						"{{baseURL}}"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "query",
+							"value": "Paris"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_02",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}?access_key={{API_KEY}}&query=InvalidCity",
+					"host": [
+						"{{baseURL}}"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "query",
+							"value": "InvalidCity"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_03",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}?access_key={{API_KEY}}&query=London",
+					"host": [
+						"{{baseURL}}"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "query",
+							"value": "London"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_04",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}?access_key=INVALID_KEY&query=Paris",
+					"host": [
+						"{{baseURL}}"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "INVALID_KEY"
+						},
+						{
+							"key": "query",
+							"value": "Paris"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "API_05",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api.weatherstack.com/historical?access_key={{API_KEY}}&query=Paris&historical_date=2023-12-01\t",
+					"protocol": "http",
+					"host": [
+						"api",
+						"weatherstack",
+						"com"
+					],
+					"path": [
+						"historical"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "{{API_KEY}}"
+						},
+						{
+							"key": "query",
+							"value": "Paris"
+						},
+						{
+							"key": "historical_date",
+							"value": "2023-12-01\t"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
